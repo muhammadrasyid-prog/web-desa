@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desa Agrowisata</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="m-0 font-sans"></body>
+<!-- Header -->
+<header class="bg-gray-50 shadow-md fixed w-full top-0 z-50">
+  <div class="max-w-screen-xl mx-auto px-6 py-3 flex justify-between items-center">
+
+    <!-- Logo + Nama Desa -->
+    <div class="flex items-center cursor-pointer">
+      <img src="assets/logo.jpeg" alt="Logo Desa" class="w-10 h-10 object-contain" />
+      <span class="text-lg font-bold text-[#124a6e] ml-2">Desa Tegal Cabakan</span>
+    </div>
+
+    <!-- Menu Navigasi Desktop -->
+    <nav class="hidden md:flex space-x-6 cursor-pointer">
+      <a href="#beranda" class="font-semibold text-[#124a6e] relative after:absolute after:bg-[#124a6e] after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300">Beranda</a>
+      <a href="#profil" class="text-[#124a6e] relative after:absolute after:bg-[#124a6e] after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300">Profil</a>
+      <a href="#potensi" class="text-[#124a6e] relative after:absolute after:bg-[#124a6e] after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300">Potensi</a>
+      <a href="#produk" class="text-[#124a6e] relative after:absolute after:bg-[#124a6e] after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300">Produk</a>
+      <a href="#kegiatan" class="text-[#124a6e] relative after:absolute after:bg-[#124a6e] after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300">Kegiatan</a>
+      <a href="#galeri" class="text-[#124a6e] relative after:absolute after:bg-[#124a6e] after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300">Galeri</a>
+      <a href="#kontak" class="text-[#124a6e] relative after:absolute after:bg-[#124a6e] after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300">Kontak</a>
+    </nav>
+
+    <!-- Hamburger Icon untuk Mobile -->
+    <button id="menu-btn" class="md:hidden focus:outline-none">
+      <svg width="30" height="30" fill="none" stroke="#124a6e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21 9.5H3"></path>
+        <path d="M21 4.5H3"></path>
+        <path d="M21 14.5H3"></path>
+        <path d="M21 19.5H3"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Dropdown Menu Mobile -->
+  <nav id="mobile-menu" class="hidden md:hidden bg-gray-50 shadow-md px-6 py-4 space-y-4">
+    <a href="#beranda" class="block text-[#124a6e] font-semibold">Beranda</a>
+    <a href="#profil" class="block text-[#124a6e]">Profil</a>
+    <a href="#potensi" class="block text-[#124a6e]">Potensi</a>
+    <a href="#produk" class="block text-[#124a6e]">Produk</a>
+    <a href="#kegiatan" class="block text-[#124a6e]">Kegiatan</a>
+    <a href="#galeri" class="block text-[#124a6e]">Galeri</a>
+    <a href="#kontak" class="block text-[#124a6e]">Kontak</a>
+  </nav>
+
+  <script>
+    // Toggle dropdown mobile menu
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</header>
+
+<!-- Beranda Section -->
+<section id="beranda" class="relative h-screen bg-cover bg-center"
+  style="background-image: url('assets/galeri/kebun.png');">
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div> <!-- Overlay gelap -->
+
+  <div class="relative z-10 flex flex-col justify-center items-center h-full text-center text-white px-4">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Temukan Pesona Alam dan Kearifan Lokal</h1>
+    <p class="text-lg md:text-xl mb-6 max-w-2xl">
+      Desa agrowisata menawarkan perngalaman yang unik bagi wisatawan, yaitu kesempatan untuk menikmati keindahan alam
+      dan kekayaan budaya masyarakat setempat.
+    </p>
+    <a href="#potensi"
+      class="group relative inline-flex h-10 items-center justify-center overflow-hidden rounded-full bg-white px-4 font-medium text-[#124a6e] border-2 border-[#124a6e] hover:bg-[#124a6e] hover:text-white transition-all duration-200">
+
+      <span class="font-semibold">Jelajahi Potensi</span>
+
+      <div
+        class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5">
+          <path
+            d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
+            fill-rule="evenodd" clip-rule="evenodd" />
+        </svg>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<section id="profil" class="relative py-16 px-16 h-[100vh]">
+   <!-- Background image sebagai elemen terpisah -->
+  <div class="absolute inset-0 -z-10">
+    <img src="assets/1.png" alt="Profil Desa" class="w-full h-full object-fit" />
+  </div>
+
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+
+    <!-- Kolom Kiri: Teks -->
+    <div>
+      <h5 class="text-xl font-medium text-[#FFB22C] mb-4">About Us</h5>
+      <h2 class="text-3xl font-bold">Desa Tegal Cabakan</h2>
+      <h2 class="text-3xl font-bold text-[#124a6e] mb-4">Agrowisata</h2>
+      <p class="text-gray-700 leading-relaxed mb-6 overflow-y-auto max-h-[200px] pr-2">
+        Desa Tegal Cabakan memiliki potensi alam yang mendukung sektor pertanian dan perkebunan. Masyarakat desa ini
+        sebagian besar menggantungkan hidupnya pada sektor pertanian, dengan komoditas utama seperti padi, jagung, dan
+        sayuran. Selain itu, terdapat juga usaha kecil dan menengah yang bergerak di bidang kerajinan tangan dan
+        industri rumahan.
+        Desa Tegal Cabakan memiliki potensi alam yang mendukung sektor pertanian dan perkebunan. Masyarakat desa ini
+        sebagian besar menggantungkan hidupnya pada sektor pertanian, dengan komoditas utama seperti padi, jagung, dan
+        sayuran. Selain itu, terdapat juga usaha kecil dan menengah yang bergerak di bidang kerajinan tangan dan
+        industri rumahan.
+        Desa Tegal Cabakan memiliki potensi alam yang mendukung sektor pertanian dan perkebunan. Masyarakat desa ini
+        sebagian besar menggantungkan hidupnya pada sektor pertanian, dengan komoditas utama seperti padi, jagung, dan
+        sayuran. Selain itu, terdapat juga usaha kecil dan menengah yang bergerak di bidang kerajinan tangan dan
+        industri rumahan.
+      </p>
+      <a href="#potensi"
+        class="group relative inline-flex h-10 items-center justify-center overflow-hidden rounded-full bg-white px-4 font-medium text-[#124a6e] border-2 border-[#124a6e] hover:bg-[#124a6e] hover:text-white transition-all duration-200">
+
+        <span class="font-semibold">Learn More</span>
+
+        <div
+          class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5">
+            <path
+              d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
+              fill-rule="evenodd" clip-rule="evenodd" />
+          </svg>
+        </div>
+      </a>
+    </div>
+
+    <!-- Kolom Kanan: Video -->
+    <div>
+      <iframe class="w-full h-64 md:h-80 rounded-lg" src="https://www.youtube.com/embed/VIDEO_ID" title="Profil Desa"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+  </div>
+</section>
+
+<section id="potensi" class="relative py-16 px-16 h-[100vh]">
+   <!-- Background image sebagai elemen terpisah -->
+  <div class="absolute inset-0 -z-10">
+    <img src="assets/2.png" alt="potensi" class="w-full h-full object-fit" />
+  </div>
+
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+      <h2 class="text-3xl font-bold text-[#124a6e] mb-4">Potensi Agrowisata</h2>
+      <p class="text-gray-700 leading-relaxed">
+        Desa menawarkan pengalaman agrowisata seperti petik stroberi, edukasi pertanian organik, dan wisata taman herbal
+        yang mendidik sekaligus menyegarkan.
+      </p>
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+      <img src="assets/galeri/agro1.jpg" class="rounded-lg h-40 w-full object-cover" />
+      <img src="assets/galeri/agro2.jpg" class="rounded-lg h-40 w-full object-cover" />
+      <img src="assets/galeri/agro3.jpg" class="rounded-lg h-40 w-full object-cover" />
+      <img src="assets/galeri/agro4.jpg" class="rounded-lg h-40 w-full object-cover" />
+    </div>
+  </div>
+</section>
+
+<section id="produk" class="relative py-16 px-16 h-[100vh]">
+   <!-- Background image sebagai elemen terpisah -->
+  <div class="absolute inset-0 -z-10">
+    <img src="assets/3.png" alt="Produk" class="w-full h-full object-fit" />
+  </div>
+
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div class="grid grid-cols-2 gap-4">
+      <img src="assets/galeri/umkm1.jpg" class="rounded-lg h-40 w-full object-cover" />
+      <img src="assets/galeri/umkm2.jpg" class="rounded-lg h-40 w-full object-cover" />
+    </div>
+    <div>
+      <h2 class="text-3xl font-bold text-[#124a6e] mb-4">Produk UMKM</h2>
+      <p class="text-gray-700 leading-relaxed">
+        Produk unggulan UMKM kami meliputi jajanan tradisional, kerajinan bambu, dan hasil olahan pertanian lokal yang
+        siap bersaing di pasar regional maupun nasional.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="kegiatan" class="relative py-16 px-16 h-[100vh]">
+   <!-- Background image sebagai elemen terpisah -->
+  <div class="absolute inset-0 -z-10">
+    <img src="assets/4.png" alt="kegiatan" class="w-full h-full object-fit" />
+  </div>
+
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+      <h2 class="text-3xl font-bold text-[#124a6e] mb-4">Kegiatan KKN</h2>
+      <p class="text-gray-700 leading-relaxed">
+        Mahasiswa KKN telah membantu desa melalui edukasi digital UMKM, pembangunan jalan desa, pelatihan pertanian, dan
+        program sosial lainnya.
+      </p>
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+      <img src="assets/galeri/kkn1.jpg" class="rounded-lg h-40 w-full object-cover" />
+      <img src="assets/galeri/kkn2.jpg" class="rounded-lg h-40 w-full object-cover" />
+    </div>
+  </div>
+</section>
+
+<section id="galeri" class="relative py-16 px-16 h-[100vh]">
+   <!-- Background image sebagai elemen terpisah -->
+  <div class="absolute inset-0 -z-10">
+    <img src="assets/1.png" alt="Galeri" class="w-full h-full object-fit" />
+  </div>
+
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold text-[#124a6e] text-center mb-8">Galeri Desa</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <img src="assets/galeri/galeri1.jpg" class="rounded-lg h-40 w-full object-cover" />
+      <img src="assets/galeri/galeri1.jpg" class="rounded-lg h-40 w-full object-cover" />
+      <img src="assets/galeri/galeri1.jpg" class="rounded-lg h-40 w-full object-cover" />
+      <img src="assets/galeri/galeri1.jpg" class="rounded-lg h-40 w-full object-cover" />
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<div class="grid md:grid-cols-3 gap-8 px-4 py-8 bg-gray-50">
+  <!-- Column 1: About -->
+  <div class="flex flex-col space-y-4">
+    <div class="flex items-center space-x-2">
+      <img src="assets/logo.jpeg" alt="Logo Desa" class="w-10 h-10 object-contain">
+      <span class="text-lg font-bold text-gray-800">Desa Tegal Cabakan</span>
+    </div>
+    <p class="text-gray-600 leading-relaxed">
+      Desa Agrowisata yang terletak di Kecamatan XYZ, Kabupaten ABC. Menyajikan keindahan alam dan kekayaan budaya lokal.
+    </p>
+  </div>
+
+  <!-- Column 2: Quick Links -->
+  <div class="flex flex-col space-y-4">
+    <h3 class="text-lg font-bold text-gray-800">Tautan Cepat</h3>
+    <ul class="space-y-2">
+      <li><a href="#profil" class="text-gray-600 hover:text-[#124a6e] transition">Profil Desa</a></li>
+      <li><a href="#potensi" class="text-gray-600 hover:text-[#124a6e] transition">Potensi Agrowisata</a></li>
+      <li><a href="#produk" class="text-gray-600 hover:text-[#124a6e] transition">Produk UMKM</a></li>
+      <li><a href="#galeri" class="text-gray-600 hover:text-[#124a6e] transition">Galeri</a></li>
+    </ul>
+  </div>
+
+  <!-- Column 3: Contact -->
+  <div class="flex flex-col space-y-4">
+    <h3 class="text-lg font-bold text-gray-800">Kontak Kami</h3>
+    <div class="space-y-2 text-gray-600">
+      <p class="flex items-center">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+        </svg>
+        Jl. Raya Desa Tegal Cabakan, Kec. XYZ
+      </p>
+      <p class="flex items-center">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+        </svg>
+        info@tegabcabakan.id
+      </p>
+      <p class="flex items-center">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+        </svg>
+        +62 123 4567 890
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="bg-[#124a6e] text-white text-center py-4 text-sm">
+  <p>© 2023 Desa Tegal Cabakan Agrowisata. All Rights Reserved.</p>
+</div>
+
+</html>
